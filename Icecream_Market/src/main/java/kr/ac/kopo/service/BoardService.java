@@ -18,4 +18,9 @@ public class BoardService {
 		List<BoardVO> list = boardDao.selectAllBoard();
 		return list;
 	}
+	
+	public BoardVO selectByNo(int no) throws Exception {
+		BoardVO board = boardDao.selectBoardByNo(no);
+		return board;
+	}
 }

@@ -1,6 +1,6 @@
 package kopo.ac.kr.board.dao;
 
-import java.util.List;
+import java.util.List; 
 
 import org.apache.ibatis.session.SqlSession;
 
@@ -23,9 +23,9 @@ public class BoardDAOImpl implements BoardDAO {
 	}
 
 	@Override
-	public BoardVO selectBoardByNo() throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+	public BoardVO selectBoardByNo(int no) throws Exception {
+		BoardVO board = sqlSession.selectOne("dao.BoardDAO.selectByNo", no);
+		return board;
 	}
 
 	@Override

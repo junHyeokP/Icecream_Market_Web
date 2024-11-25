@@ -4,6 +4,10 @@
   <servlet>
   	<servlet-name>dispatcher</servlet-name>
   	<servlet-class>kr.ac.kopo.framework.DispatcherServlet</servlet-class>
+  	<init-param>
+  			<param-name>propName</param-name>
+  			<param-value>bean.properties</param-value>
+  		</init-param>
   </servlet>
   <servlet-mapping>
   	<servlet-name>dispatcher</servlet-name>
