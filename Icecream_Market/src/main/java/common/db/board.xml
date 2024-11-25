@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.BoardDAO">
+	
+	<!-- 세미콜론은 붙이면 안된다 -->
+	
+	<select id = "selectAllBoard" resultType = "boardVO">
+		select no, title, writer, content, view_cnt, to_char(reg_date, 'yyyy-mm-dd') as regdate 
+		  from t_board
+		 order by no desc 
+	</select>
+	
+</mapper>
