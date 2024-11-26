@@ -8,5 +8,6 @@
 </head>
 <body>
 	<a href = "/Icecream_Market/board/list.do">자유게시판</a>
+	<a href = "/Icecream_Market/member/loginPage.do">로그인</a>
 </body>
 </html>

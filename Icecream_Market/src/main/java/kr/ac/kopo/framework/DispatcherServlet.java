@@ -27,6 +27,7 @@ public class DispatcherServlet extends HttpServlet {
 					throws ServletException, IOException {
 		
 		String contextPath = request.getContextPath();
+		System.out.println("contextPath : " + contextPath);
 		String uri = request.getRequestURI();
 		uri = uri.substring(contextPath.length());
 		System.out.println("요청 uri : " + uri);
