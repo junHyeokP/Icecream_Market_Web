@@ -1,0 +1,65 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+
+button {
+	  margin: 0;
+	  padding: 10px 30px;
+	
+	  font-family: "Noto Sans KR", sans-serif;
+	  font-size: 1rem;
+	  font-weight: 400;
+	  text-align: center;
+	  text-decoration: none;
+	  
+	  display : inline-block;
+	  width: auto;
+	
+	  border: none;
+	  border-radius: 10px;
+	}
+	
+	button {
+		-webkit-appearance : none;
+		-moz-appearance : none;
+		appearance : none;
+	} 
+	
+	button {
+		
+		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+  		cursor: pointer;
+
+  		transition: 0.5s;
+	}
+	
+	button:active,
+	button:hover,
+	button:focus {
+  		background: var(--button-hover-bg-color);
+  		outline: 0;
+	}
+	button:disabled {
+ 	 	opacity: 0.5;
+	}
+	
+	/*클래스에 따라서 글자와 배경에 다른 색상 할당하는 CSS 변수*/
+	:root {
+  --button-color: #ffffff;
+  --button-bg-color: rgb(5, 170, 140);
+  --button-hover-bg-color: rgb(5, 230, 140);
+	}
+	
+	button {  
+	  background: var(--button-bg-color);
+	  color: var(--button-color);
+	}
+	
+	#backBtn {
+	/*CSS변수 값 재할당*/
+	--button-color: #ffffff;
+  	--button-bg-color: rgb(110, 140, 140);
+  	--button-hover-bg-color: rgb(245, 111, 106);
+  		
+  	padding: 5px;
+	}

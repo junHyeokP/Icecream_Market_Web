@@ -17,7 +17,7 @@ public class DispatcherServlet extends HttpServlet {
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		String propName = config.getInitParameter("propName");
-		//System.out.println("propName : " + propName);
+		System.out.println("propName : " + propName);
 		mappings = new HandlerMapping(propName);
 	}
 	//
@@ -25,7 +25,6 @@ public class DispatcherServlet extends HttpServlet {
 	public void service(HttpServletRequest request, 
 			HttpServletResponse response)
 					throws ServletException, IOException {
-		
 		String contextPath = request.getContextPath();
 		System.out.println("contextPath : " + contextPath);
 		String uri = request.getRequestURI();
@@ -44,11 +43,3 @@ public class DispatcherServlet extends HttpServlet {
 		}
 	}
 }
-
-
-
-
-
-
-
-

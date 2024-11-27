@@ -23,5 +23,8 @@
 	<form action = "registPage.do">
 		<button>회원가입</button>
 	</form>
+	<form action = "../index.jsp">
+		<button>뒤로</button>
+	</form>
 </body>
 </html>

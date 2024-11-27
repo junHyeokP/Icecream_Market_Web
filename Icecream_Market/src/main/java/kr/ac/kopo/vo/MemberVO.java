@@ -2,7 +2,7 @@ package kr.ac.kopo.vo;
 
 public class MemberVO {
 	
-	int id;
+	String id;
 	String name;
 	String password;
 	String email_id;
@@ -11,14 +11,17 @@ public class MemberVO {
 	String detail_addr;
 	String reg_date;
 	
-	public MemberVO(int id, String password) {
+	
+
+	public MemberVO(String id, String name, String password) {
 		super();
 		this.id = id;
+		this.name = name;
 		this.password = password;
 	}
 
-	public MemberVO(int id, String name, String password, String email_id, String email_domain, String basic_addr,
-			String detail_addr, String reg_date) {
+	public MemberVO(String id, String name, String password, String email_id, String email_domain, String basic_addr,
+			String detail_addr) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -27,14 +30,14 @@ public class MemberVO {
 		this.email_domain = email_domain;
 		this.basic_addr = basic_addr;
 		this.detail_addr = detail_addr;
-		this.reg_date = reg_date;
 	}
 
-	public int getId() {
+
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

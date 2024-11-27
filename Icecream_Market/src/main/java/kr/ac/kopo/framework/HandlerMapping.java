@@ -30,7 +30,7 @@ public class HandlerMapping {
 			//	System.out.println(key.toString() + " : " + prop.getProperty(key.toString()));
 				String className = prop.getProperty(key.toString()); // kr.ac.kopo.controller.BoardListController
 		
-				System.out.println("className : " + className); //프로퍼티 값들(경로, Controller이름)이 나열된다
+				//System.out.println("className : " + className); //프로퍼티 값들(경로, Controller이름)이 나열된다
 				Class<?> clz = Class.forName(className);
 				Constructor<?> constructor = clz.getConstructor();
 				Controller instance = (Controller)constructor.newInstance();
