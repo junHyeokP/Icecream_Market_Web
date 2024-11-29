@@ -11,7 +11,7 @@ public class BoardVO {
 	
 	
 	public BoardVO() {
-		
+		// mybatis가 자동적으로 객체를 생성할때는 디폴트 생성자가 존재해야한다.	
 	}
 	
 	public BoardVO(int no, String title, String writer) {

@@ -24,9 +24,10 @@
 		</environment>
 	</environments>
 	
-<!-- must -->
+<!-- sql query xml file mappers -->
 	<mappers>
 		<mapper resource="common/db/board.xml"/>
+		<mapper resource="common/db/member.xml"/>
 	</mappers>
 
 </configuration>

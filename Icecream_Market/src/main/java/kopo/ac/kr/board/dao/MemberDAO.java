@@ -8,7 +8,7 @@ public interface MemberDAO {
 	
 	int createMember(MemberVO member);
 	List<MemberVO> selectAllMembers();
-	MemberVO selectMemberByID();
-	int updateMember();
-	int deleteMember();
+	MemberVO selectMemberByID(String id);
+	int updateMember(MemberVO member);
+	int deleteMember(String id);
 }

@@ -23,5 +23,11 @@ public class MemberService {
 		List<MemberVO> list = memberDao.selectAllMembers();
 		return list;
 	}
+
+	public MemberVO findMember(String id) {
+		MemberVO member = memberDao.selectMemberByID(id);
+		return member;
+	}
+	
 	
 }

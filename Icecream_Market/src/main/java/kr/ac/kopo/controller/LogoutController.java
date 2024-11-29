@@ -9,12 +9,12 @@ import jakarta.servlet.http.HttpSession;
 import kr.ac.kopo.service.MemberService;
 import kr.ac.kopo.vo.MemberVO;
 
-public class LoginController implements Controller {
+public class LogoutController implements Controller {
 	
 	MemberService mService;
 	HttpSession session;
 	
-	public LoginController() {
+	public LogoutController() {
 		this.mService = new MemberService();
 		
 	}
@@ -23,17 +23,8 @@ public class LoginController implements Controller {
 	public String handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		this.session = request.getSession();
-		request.setCharacterEncoding("UTF-8");
+		session.removeAttribute("member");
 		
-		String id = request.getParameter("id");
-		String pwd = request.getParameter("password");
-		
-		MemberVO member = mService.findMember(id); 
-		
-		if (member != null) {
-			session.setAttribute("member", member);
-		} 
-		
-		return "/jsp/member/login.jsp";
+		return "/jsp/member/logout.jsp";
 	}
 }

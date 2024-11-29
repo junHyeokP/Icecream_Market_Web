@@ -26,8 +26,6 @@ public class RegistController implements Controller {
 		String detail_addr = request.getParameter("detail_addr");
 		MemberVO member = new MemberVO(id, name, pwd, email_id, email_domain, basic_addr, detail_addr);
 		
-		System.out.println(id);
-		
 		mService.registMember(member);
 		
 		return "/jsp/member/regist.jsp";

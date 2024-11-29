@@ -14,22 +14,21 @@
 	<h1> 회원가입 </h1>
 	
 		<form action = "regist.do" method = "post">
+				<input type = "text" name = "id" placeholder = "ID" required>
+				<input type = "text" name = "name" placeholder = "이름" required> 
+				<input type = "password" name = "password" placeholder = "비밀번호" required> 
+				<input type = "text" name = "email_id" placeholder = "이메일ID" required> 
+				<input type = "text" name = "email_domain" placeholder = "이메일Domain" required> 
+				<input type = "text" name = "basic_addr" placeholder = "기본 주소" required> 
+				<input type = "text" name = "detail_addr" placeholder = "상세 주소" required>
 			
-				<input type = "text" name = "id" placeholder = "ID">
-				<input type = "text" name = "name" placeholder = "이름"> 
-				<input type = "password" name = "password" placeholder = "비밀번호"> 
-				<input type = "text" name = "email_id" placeholder = "이메일ID"> 
-				<input type = "text" name = "email_domain" placeholder = "이메일Domain"> 
-				<input type = "text" name = "basic_addr" placeholder = "기본 주소"> 
-				<input type = "text" name = "detail_addr" placeholder = "상세 주소">
-			
-		<div class = "button" id = "registBtn">
+		<div class = "button" id = "registBtn" align = "center">
 			<button>회원가입</button>	
 		</div>
 		</form>
 		<form action = "loginPage.do">
 			<div id = "backBtn">
-				<button id = "goPrevPage">뒤로</button>
+				<button>뒤로</button>
 			</div>
 		</form>	
 	</div>

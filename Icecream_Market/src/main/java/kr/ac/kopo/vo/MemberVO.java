@@ -2,16 +2,20 @@ package kr.ac.kopo.vo;
 
 public class MemberVO {
 	
-	String id;
-	String name;
-	String password;
-	String email_id;
-	String email_domain;
-	String basic_addr;
-	String detail_addr;
-	String reg_date;
+	private String id;
+	private String name;
+	private String password;
+	private String email_id;
+	private String email_domain;
+	private String basic_addr;
+	private String detail_addr;
+	private String reg_date;
 	
 	
+	
+	public MemberVO() {
+		// mybatis가 자동적으로 객체를 생성할때는 디폴트 생성자가 존재해야한다.	
+	}
 
 	public MemberVO(String id, String name, String password) {
 		super();
@@ -96,7 +100,12 @@ public class MemberVO {
 	public void setReg_date(String reg_date) {
 		this.reg_date = reg_date;
 	}
-	
-	
+
+	@Override
+	public String toString() {
+		return "MemberVO [id=" + id + ", name=" + name + ", password=" + password + ", email_id=" + email_id
+				+ ", email_domain=" + email_domain + ", basic_addr=" + basic_addr + ", detail_addr=" + detail_addr
+				+ ", reg_date=" + reg_date + "]";
+	}
 	
 }

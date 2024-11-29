@@ -8,9 +8,9 @@
 </head>
 <body>
 	<form method = "post" action = "login.do">
-		<div>
-			<input type = "text" name = "id" placeholder = "아이디 입력"> <br>
-			<input type = "password" name = "password" placeholder = "비밀번호 입력">
+		<div id = "log">
+			<input type = "text" name = "id" placeholder = "아이디 입력" required> <br>
+			<input type = "password" name = "password" placeholder = "비밀번호 입력" required>
 		</div>
 		<div>
 			<button>로그인</button>
@@ -18,7 +18,7 @@
 	</form>
 	<div>혹은</div>
 	<div>
-		카카오페이지로 로그인
+		카카오 계정으로 로그인
 	</div>
 	<form action = "registPage.do">
 		<button>회원가입</button>

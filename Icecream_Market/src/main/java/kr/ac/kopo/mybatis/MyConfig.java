@@ -1,6 +1,6 @@
 package kr.ac.kopo.mybatis;
 
-import java.io.InputStream;
+import java.io.InputStream; 
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -17,6 +17,7 @@ public class MyConfig {
 			InputStream inputStream = Resources.getResourceAsStream(resource);
 			SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 			session = sqlSessionFactory.openSession();
+			
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
