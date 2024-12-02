@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%@include file = "/jsp/common/header.jsp" %>
 	<h2>자유게시판 페이지</h2>
 	<table border = "2">
 	 <tr>

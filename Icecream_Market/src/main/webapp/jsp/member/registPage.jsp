@@ -5,10 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
 <link rel="stylesheet" href = "/Icecream_Market/css/button_CSS.css"/>
 <link rel="stylesheet" href = "/Icecream_Market/css/member_CSS/registPage_Style.css"/>
 </head>
 <body>
+
 	<div id = "container">
 	
 	<h1> 회원가입 </h1>
