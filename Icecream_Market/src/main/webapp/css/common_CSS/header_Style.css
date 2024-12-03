@@ -19,10 +19,7 @@
 	  width: auto;
 }
 
-button {
-	  -webkit-appearance : none;
-	  -moz-appearance : none;
-	  appearance : none;
+#logoutBtn {
 		
 	  margin: 0;
 	  padding: 10px 30px;
@@ -32,6 +29,8 @@ button {
 	  font-weight: 400;
 	  text-align: center;
 	  text-decoration: none; 
+	  color : white;
+	  background-color : black;
 	  width: auto;
 } 
 

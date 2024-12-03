@@ -5,8 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-
-<link rel="stylesheet" href = "/Icecream_Market/css/button_CSS.css"/>
+<link rel="stylesheet" href = "/Icecream_Market/css/common_CSS/button_Style.css" />
 <link rel="stylesheet" href = "/Icecream_Market/css/member_CSS/registPage_Style.css"/>
 </head>
 <body>
@@ -23,13 +22,12 @@
 				<input type = "text" name = "email_domain" placeholder = "이메일Domain" required> 
 				<input type = "text" name = "basic_addr" placeholder = "기본 주소" required> 
 				<input type = "text" name = "detail_addr" placeholder = "상세 주소" required>
-			
-		<div class = "button" id = "registBtn" align = "center">
+		<div align = "center">
 			<button>회원가입</button>	
 		</div>
 		</form>
 		<form action = "loginPage.do">
-			<div id = "backBtn">
+			<div id = "noBtn">
 				<button>뒤로</button>
 			</div>
 		</form>	

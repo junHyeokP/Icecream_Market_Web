@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href = "/Icecream_Market/css/common_CSS/header_CSS.css"/>
+<link rel="stylesheet" href = "/Icecream_Market/css/common_CSS/header_Style.css"/>
 <script src = "/Icecream_Market/js/member_JS/index_Btn_func.js"></script>
 </head>
 <body>
@@ -15,12 +15,14 @@
 		<a id = "title" href = "/Icecream_Market/index.jsp"> 아이스크림 마켓 </a>
 	</h1>
 		<a class = "anchor" href = "/Icecream_Market/board/list.do">자유게시판</a>
-		<a class = "anchor" href = "/Icecream_Market/member/loginPage.do">
-			<c:if test="${ empty sessionScope.member }" >로그인</c:if>
-		</a>	
+		
+			<c:if test="${ empty sessionScope.member }" >
+			<a class = "anchor" href = "/Icecream_Market/member/loginPage.do">로그인</a>	
+			</c:if>
+		
 		<c:if test="${ not empty sessionScope.member }">
 			
-			<button class = "anchor" onclick = "return logoutConfirm()">로그아웃</button>
+			<button id = "logoutBtn" onclick = "return logoutConfirm()">로그아웃</button>
 			<a class = "anchor" href = "/Icecream_Market/member/myPage.do">마이페이지</a>
 		</c:if>
 	 
