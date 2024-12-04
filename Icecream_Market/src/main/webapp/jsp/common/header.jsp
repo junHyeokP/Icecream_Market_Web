@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href = "/Icecream_Market/css/common_CSS/header_Style.css"/>
-<script src = "/Icecream_Market/js/member_JS/index_Btn_func.js"></script>
+<script src = "/Icecream_Market/js/member_JS/logout_onclick_func.js"></script>
 </head>
 <body>
 	<div id = "h_container">
@@ -17,7 +17,7 @@
 		<a class = "anchor" href = "/Icecream_Market/board/list.do">자유게시판</a>
 		
 			<c:if test="${ empty sessionScope.member }" >
-			<a class = "anchor" href = "/Icecream_Market/member/loginPage.do">로그인</a>	
+				<a class = "anchor" href = "/Icecream_Market/member/loginPage.do">로그인</a>	
 			</c:if>
 		
 		<c:if test="${ not empty sessionScope.member }">

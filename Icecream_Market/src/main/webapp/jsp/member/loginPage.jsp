@@ -5,6 +5,8 @@
 <head>
 <link rel="stylesheet" href = "/Icecream_Market/css/common_CSS/button_Style.css" />
 <link rel="stylesheet" href = "/Icecream_Market/css/member_CSS/loginPage_Style.css" />
+<script src = "/Icecream_Market/lib/jquery-3.7.1.min.js"></script>
+<script src = "/Icecream_Market/js/member_JS/loginPage_jq_func.js"></script>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
@@ -24,14 +26,10 @@
 	<div>
 		카카오 계정으로 로그인
 	</div>
-	<form action = "registPage.do">
-		<button>회원가입</button>
-	</form>
-	<form action = "../index.jsp">
-		<div id = "noBtn">
-			<button>뒤로</button>
-		</div>
-	</form>
+	<button>회원가입</button>
+	<div id = "noBtn">
+		<button>뒤로</button>
 	</div>
+ </div>
 </body>
 </html>

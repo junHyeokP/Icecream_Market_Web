@@ -55,7 +55,7 @@ button {
 	  color: var(--button-color);
 	}
 	
-	#noBtn {
+	.noBtn {
 	/*CSS변수 값 재할당*/
 	--button-color: #ffffff;
   	--button-bg-color: rgb(110, 140, 140);

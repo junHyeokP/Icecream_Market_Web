@@ -24,7 +24,6 @@ public class myPageController implements Controller {
 		
 		this.session = request.getSession();
 		
-		
 		return "/jsp/member/myPage.jsp";
 	}
 }

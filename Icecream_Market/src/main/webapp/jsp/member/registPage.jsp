@@ -27,7 +27,7 @@
 		</div>
 		</form>
 		<form action = "loginPage.do">
-			<div id = "noBtn">
+			<div class = "noBtn">
 				<button>뒤로</button>
 			</div>
 		</form>	
