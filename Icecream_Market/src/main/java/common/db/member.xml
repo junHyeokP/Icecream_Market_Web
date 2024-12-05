@@ -30,5 +30,23 @@
 	 		  from ice_member
 	 		 where id = #{id}  
 	 </select>
+	 
+	 <update id = "updateMember" parameterType = "MemberVO">
+	 	update ice_member
+	 	   <set>
+	 	   		<if test = "id != null">id = #{id},</if>
+	 	   		<if test = "name != null">name = #{name},</if>
+	 	   		<if test = "password != null">password = #{password},</if>
+	 	   		<if test = "email_id != null">email_id = #{email_id},</if>
+	 	   		<if test = "email_domain != null">email_domain = #{email_domain},</if>
+	 	   		<if test = "basic_addr != null">basic_addr = #{basic_addr},</if>
+	 	   		<if test = "detail_addr != null">detail_addr = #{detail_addr},</if>
+	 	   </set>  
+	 	where id = #{id}	   
+	 </update>
+	
+	<delete id = "deleteMember" parameterType = "String">
+		delete ice_member where id = #{id}
+	</delete>
 	
 </mapper>

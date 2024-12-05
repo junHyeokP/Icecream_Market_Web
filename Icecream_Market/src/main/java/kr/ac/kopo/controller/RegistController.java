@@ -16,6 +16,7 @@ public class RegistController implements Controller {
 	@Override
 	public String handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
+		request.setCharacterEncoding("UTF-8");
 		
 		String id = request.getParameter("id");
 		String name = request.getParameter("name");

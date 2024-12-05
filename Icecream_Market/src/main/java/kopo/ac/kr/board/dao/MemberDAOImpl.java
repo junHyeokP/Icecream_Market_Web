@@ -11,8 +11,6 @@ public class MemberDAOImpl implements MemberDAO {
 	
 	SqlSession sqlSession;
 	
-	
-	
 	public MemberDAOImpl() {
 		sqlSession = new MyConfig().getInstance();
 	}
@@ -40,17 +38,15 @@ public class MemberDAOImpl implements MemberDAO {
 
 	@Override
 	public int updateMember(MemberVO member) {
-		// TODO Auto-generated method stub
-		return 0;
+		int result = sqlSession.update("dao.memberDAO.updateMember", member);
+		sqlSession.commit();
+		return result;
 	}
 
 	@Override
 	public int deleteMember(String id) {
-		// TODO Auto-generated method stub
-		return 0;
+		int result = sqlSession.delete("dao.memberDAO.deleteMember", id);
+		return result;
 	}
 
-
-
-	
 }

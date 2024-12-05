@@ -55,11 +55,20 @@ button {
 	  color: var(--button-color);
 	}
 	
-	.noBtn {
+	.redBtn {
 	/*CSS변수 값 재할당*/
 	--button-color: #ffffff;
   	--button-bg-color: rgb(110, 140, 140);
   	--button-hover-bg-color: rgb(245, 111, 106);
+  		
+  	padding: 5px;
+	}
+	
+	.yellowBtn {
+	/*CSS변수 값 재할당*/
+	--button-color: #ffffff;
+  	--button-bg-color: rgb(194, 139, 106);
+  	--button-hover-bg-color: rgb(255, 197, 77);
   		
   	padding: 5px;
 	}

@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src = "/Icecream_Market/lib/jquery-3.7.1.min.js"></script>
-<script src = "/Icecream_Market/js/member_JS/myPage_jq_func.js"></script>
+<script src = "/Icecream_Market/js/member_JS/member_Btn_func.js"></script>
 </head>
 <body>
  <h2>내 정보</h2>
@@ -27,16 +27,16 @@
 	   	<td>${ sessionScope.member.reg_date }</td>
    	</tr>
 	</table>
-	<div>
-		<button class = "updateBtn">수정</button>
+	<span>
+		<button id = "updateBtn">수정</button>
+	</span>
+	<span class = "redBtn">
+		<button id = "deleteBtn">계정 삭제</button>
+	</span>
+	<div class = "yellowBtn">
+		<button id = "favBtn">즐겨찾기</button>
 	</div>
-	<div>
-		<button class = "deleteBtn">계정 삭제</button>
-	</div>
-	<div>
-		<button class = "favBtn">즐겨찾기</button>
-	</div>
-	<div>
+	<div class = "redBtn">
 		<button class = "backBtn">뒤로</button>
 	</div>
 </body>

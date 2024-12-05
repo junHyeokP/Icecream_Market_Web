@@ -29,5 +29,23 @@ public class MemberService {
 		return member;
 	}
 	
+	public void updateMember(MemberVO member) {
+		int result = memberDao.updateMember(member);
+		if(result > 0) {
+			System.out.println(result + "개 행 수정");
+		} else {
+			System.out.println("수정된 행이 없습니다.");
+		}
+	}
+
+	public void removeMember(String id) {
+		
+		int result = memberDao.deleteMember(id);
+		if(result > 0) {
+			System.out.println(result + "개 행 삭제");
+		} else {
+			System.out.println("삭제된 행이 없습니다.");
+		}
+	}
 	
 }

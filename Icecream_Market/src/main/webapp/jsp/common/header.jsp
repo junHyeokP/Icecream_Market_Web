@@ -7,7 +7,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href = "/Icecream_Market/css/common_CSS/header_Style.css"/>
-<script src = "/Icecream_Market/js/member_JS/logout_onclick_func.js"></script>
+<script src = "/Icecream_Market/lib/jquery-3.7.1.min.js"></script>
+<script src = "/Icecream_Market/js/member_JS/member_Btn_func.js"></script>
 </head>
 <body>
 	<div id = "h_container">
@@ -21,9 +22,9 @@
 			</c:if>
 		
 		<c:if test="${ not empty sessionScope.member }">
-			
-			<button id = "logoutBtn" onclick = "return logoutConfirm()">로그아웃</button>
+			<button id = "logoutBtn">로그아웃</button>
 			<a class = "anchor" href = "/Icecream_Market/member/myPage.do">마이페이지</a>
+			<a class = "anchor" href = "/Icecream_Market/icecream/cartPage.do">장바구니</a>
 		</c:if>
 	 
 	</div>

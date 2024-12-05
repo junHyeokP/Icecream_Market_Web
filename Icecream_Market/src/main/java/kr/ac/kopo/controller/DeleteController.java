@@ -1,29 +1,30 @@
 package kr.ac.kopo.controller;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest; 
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import kr.ac.kopo.service.MemberService;
 import kr.ac.kopo.vo.MemberVO;
 
-public class myPageController implements Controller {
+public class DeleteController implements Controller {
 	
 	MemberService mService;
 	HttpSession session;
 	
-	public myPageController() {
+	public DeleteController() {
 		this.mService = new MemberService();
-		
 	}
 
 	@Override
 	public String handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		this.session = request.getSession();
+		MemberVO member = (MemberVO)session.getAttribute("member");
+		String id = member.getId();
 		
-		return "/jsp/member/myPage.jsp";
+		mService.removeMember(id);
+		session.removeAttribute("member");
+		
+		return "/jsp/member/delete.jsp";
 	}
 }
