@@ -2,8 +2,8 @@ package kr.ac.kopo.service;
 
 import java.util.List;
 
-import kopo.ac.kr.board.dao.MemberDAO;
-import kopo.ac.kr.board.dao.MemberDAOImpl;
+import kr.ac.kopo.board.dao.MemberDAO;
+import kr.ac.kopo.board.dao.MemberDAOImpl;
 import kr.ac.kopo.vo.MemberVO;
 
 public class MemberService {

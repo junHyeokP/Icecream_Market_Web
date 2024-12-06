@@ -1,4 +1,4 @@
-package kopo.ac.kr.board.dao;
+package kr.ac.kopo.board.dao;
 
 import java.util.List;
 

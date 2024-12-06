@@ -2,8 +2,8 @@ package kr.ac.kopo.service;
 
 import java.util.List;
 
-import kopo.ac.kr.board.dao.BoardDAO;
-import kopo.ac.kr.board.dao.BoardDAOImpl;
+import kr.ac.kopo.board.dao.BoardDAO;
+import kr.ac.kopo.board.dao.BoardDAOImpl;
 import kr.ac.kopo.vo.BoardVO;
 
 public class BoardService {
