@@ -6,25 +6,19 @@ import jakarta.servlet.http.HttpSession;
 import kr.ac.kopo.service.MemberService;
 import kr.ac.kopo.vo.MemberVO;
 
-public class DeleteController implements Controller {
+public class IceSelectController implements Controller {
 	
-	MemberService mService;
+	
 	HttpSession session;
 	
-	public DeleteController() {
-		this.mService = new MemberService();
-	}
-
 	@Override
 	public String handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
+		request.setCharacterEncoding("UTF-8");
+		
 		this.session = request.getSession();
-		MemberVO member = (MemberVO)session.getAttribute("member");
-		String im_id = member.getIm_id();
 		
-		mService.removeMember(im_id);
-		session.removeAttribute("member");
 		
-		return "/jsp/member/delete.jsp";
+		return "/jsp/member/update.jsp";
 	}
 }

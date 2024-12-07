@@ -8,5 +8,11 @@
 </head>
 <body>
 	<%@include file = "/jsp/common/header.jsp" %>
+	<table>
+		<tr>
+			<th>
+			</th>
+		</tr>
+	</table>
 </body>
 </html>

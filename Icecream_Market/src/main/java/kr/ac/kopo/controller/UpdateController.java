@@ -21,13 +21,13 @@ public class UpdateController implements Controller {
 		
 		MemberVO member = (MemberVO)session.getAttribute("member");
 		
-		member.setId(request.getParameter("id"));
-		member.setName(request.getParameter("name"));
-		member.setPassword(request.getParameter("password"));
-		member.setEmail_id(request.getParameter("email_id"));
-		member.setEmail_domain(request.getParameter("email_domain"));
-		member.setBasic_addr(request.getParameter("basic_addr"));
-		member.setDetail_addr(request.getParameter("detail_addr"));
+		member.setIm_id(request.getParameter("id"));
+		member.setIm_name(request.getParameter("name"));
+		member.setIm_password(request.getParameter("password"));
+		member.setIm_email_id(request.getParameter("email_id"));
+		member.setIm_email_domain(request.getParameter("email_domain"));
+		member.setIm_basic_addr(request.getParameter("basic_addr"));
+		member.setIm_detail_addr(request.getParameter("detail_addr"));
 		
 		mService.updateMember(member);
 		
