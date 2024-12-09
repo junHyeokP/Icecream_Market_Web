@@ -9,6 +9,6 @@
 </head>
 <body>
 	<%@include file = "/jsp/common/header.jsp" %>
-	<div align = "center"><h2>지금 바로 주문하러 가기</h2></div>
+	<%@include file = "/jsp/common/content.jsp" %>
 </body>
 </html>

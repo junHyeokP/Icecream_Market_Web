@@ -12,7 +12,7 @@
 		파라미터 명으로 사용  : ${변수명}
 	 -->
 	 
-	 <!-- COMMIT -->
+	 <!-- need to COMMIT -->
 	 <insert id = "insertMember" parameterType = "MemberVO">
 	 	insert into ice_member(im_id, im_name, im_password, im_email_id, im_email_domain, im_basic_addr, im_detail_addr)
 	 	       values (#{im_id}
@@ -26,9 +26,9 @@
 	 </insert>
 	 
 	 <select id = "selectByID" resultType = "MemberVO">
-	 		select im_id, im_name, im_password, im_email_id, im_email_domain, im_basic_addr, im_detail_addr, to_char(im_reg_date, 'yyyy-mm-dd') as reg_date
+	 		select im_id, im_name, im_password, im_email_id, im_email_domain, im_basic_addr, im_detail_addr, to_char(im_reg_date, 'yyyy-mm-dd') as im_reg_date
 	 		  from ice_member
-	 		 where id = #{im_id}  
+	 		 where im_id = #{im_id}  
 	 </select>
 	 
 	 <update id = "updateMember" parameterType = "MemberVO">
@@ -46,7 +46,7 @@
 	 </update>
 	
 	<delete id = "deleteMember" parameterType = "String">
-		delete ice_member where im_id = #{im_id}
+		delete ice_member where im_id = #{id}
 	</delete>
 	
 </mapper>

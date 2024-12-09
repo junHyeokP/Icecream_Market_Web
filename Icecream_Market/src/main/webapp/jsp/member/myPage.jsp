@@ -20,11 +20,11 @@
 	   	<th>가입날짜</th>
    	</tr>
    	<tr>
-	   	<td>${ sessionScope.member.name }</td>
-	   	<td>${ sessionScope.member.id }</td>
-	   	<td>${ sessionScope.member.email_id }${ sessionScope.member.email_domain }</td>
-	   	<td>${ sessionScope.member.basic_addr },${ sessionScope.member.detail_addr }</td>
-	   	<td>${ sessionScope.member.reg_date }</td>
+	   	<td>${ sessionScope.member.im_name }</td>
+	   	<td>${ sessionScope.member.im_id }</td>
+	   	<td>${ sessionScope.member.im_email_id }${ sessionScope.member.im_email_domain }</td>
+	   	<td>${ sessionScope.member.im_basic_addr },${ sessionScope.member.im_detail_addr }</td>
+	   	<td>${ sessionScope.member.im_reg_date}</td>
    	</tr>
 	</table>
 	<span>

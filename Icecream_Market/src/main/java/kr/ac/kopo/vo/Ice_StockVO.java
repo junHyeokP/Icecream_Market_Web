@@ -1,11 +1,10 @@
 package kr.ac.kopo.vo;
 
 public class Ice_StockVO {
-	String ice_flavors;
-	int ice_quantity;
-	String ice_uptodate;
 	
-	
+	private String ice_flavors;
+	private int ice_quantity;
+	private String ice_uptodate;
 	
 	public Ice_StockVO() {
 		

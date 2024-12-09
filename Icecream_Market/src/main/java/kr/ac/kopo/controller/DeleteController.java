@@ -24,7 +24,7 @@ public class DeleteController implements Controller {
 		
 		mService.removeMember(im_id);
 		session.removeAttribute("member");
-		
+
 		return "/jsp/member/delete.jsp";
 	}
 }

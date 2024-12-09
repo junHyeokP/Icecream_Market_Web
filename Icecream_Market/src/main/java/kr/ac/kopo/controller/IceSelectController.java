@@ -8,7 +8,6 @@ import kr.ac.kopo.vo.MemberVO;
 
 public class IceSelectController implements Controller {
 	
-	
 	HttpSession session;
 	
 	@Override
@@ -18,7 +17,17 @@ public class IceSelectController implements Controller {
 		
 		this.session = request.getSession();
 		
+		String[] tempArr = request.getParameterValues("ice");
+		String[] iceArr = new String[tempArr.length];
+		for (int i = 0; i < tempArr.length; i++) {
+			if(tempArr[i] != null) {
+				iceArr[i] = tempArr[i]; 
+			}
+		}
 		
-		return "/jsp/member/update.jsp";
+		System.out.println(iceArr[0]);
+		System.out.println(iceArr[1]);
+		
+		return "/jsp/icecream/iceSelect.jsp";
 	}
 }

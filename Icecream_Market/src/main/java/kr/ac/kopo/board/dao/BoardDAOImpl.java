@@ -1,6 +1,6 @@
 package kr.ac.kopo.board.dao;
 
-import java.util.List; 
+import java.util.List;  
 
 import org.apache.ibatis.session.SqlSession;
 

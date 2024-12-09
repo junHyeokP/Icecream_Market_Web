@@ -12,6 +12,6 @@ public class IceSelectPageController implements Controller {
 	public String handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		
-		return "/jsp/member/update.jsp";
+		return "/jsp/icecream/iceSelectPage.jsp";
 	}
 }

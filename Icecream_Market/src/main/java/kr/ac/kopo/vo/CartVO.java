@@ -1,10 +1,10 @@
 package kr.ac.kopo.vo;
 
 public class CartVO {
+	
 	private String cart_ice_cup;
 	private String im_id;
 	private int cart_quantity;
-	
 	
 	
 	public CartVO() {

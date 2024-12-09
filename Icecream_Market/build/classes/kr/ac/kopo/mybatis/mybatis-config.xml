@@ -28,6 +28,7 @@
 	<mappers>
 		<mapper resource="common/db/board.xml"/>
 		<mapper resource="common/db/member.xml"/>
+		<mapper resource="common/db/cart.xml"/>
 	</mappers>
 
 </configuration>

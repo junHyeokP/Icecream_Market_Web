@@ -20,7 +20,7 @@ public class DispatcherServlet extends HttpServlet {
 		System.out.println("propName : " + propName);
 		mappings = new HandlerMapping(propName);
 	}
-	//
+	
 	@Override
 	public void service(HttpServletRequest request, 
 			HttpServletResponse response)

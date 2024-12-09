@@ -5,6 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+	alert('선택한 아이스크림 조합이 장바구니에 추가되었습니다.')
+</script>
 </head>
 <body>
 	

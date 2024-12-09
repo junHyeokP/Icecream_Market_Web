@@ -13,7 +13,7 @@
 <body>
 	<div id = "h_container">
 	<h1> 
-		<a id = "title" href = "/Icecream_Market/index.jsp"> 아이스크림 마켓 </a>
+		<a id = "title" href = "/Icecream_Market/index.jsp"> 아이스크림 배달 웹 </a>
 	</h1>
 		<a class = "anchor" href = "/Icecream_Market/board/list.do">자유게시판</a>
 		
@@ -24,6 +24,8 @@
 		<c:if test="${ not empty sessionScope.member }">
 			<button id = "logoutBtn">로그아웃</button>
 			<a class = "anchor" href = "/Icecream_Market/member/myPage.do">마이페이지</a>
+		</c:if>
+		<c:if test = "${ not empty sessionScope.cart}">
 			<a class = "anchor" href = "/Icecream_Market/icecream/cartPage.do">장바구니</a>
 		</c:if>
 	 
