@@ -1,14 +1,25 @@
 package kr.ac.kopo.vo;
 
+import java.util.List;
+
 public class Ice_StockVO {
 	
 	private String ice_flavors;
 	private int ice_quantity;
 	private String ice_uptodate;
 	
+	
 	public Ice_StockVO() {
 		
 	}
+	
+
+	public Ice_StockVO(String ice_flavors, int ice_quantity) {
+		this.ice_flavors = ice_flavors;
+		this.ice_quantity = ice_quantity;
+	}
+
+
 
 	public Ice_StockVO(String ice_flavors, int ice_quantity, String ice_uptodate) {
 		

@@ -34,15 +34,15 @@
 	 <update id = "updateMember" parameterType = "MemberVO">
 	 	update ice_member
 	 	   <set>
-	 	   		<if test = "id != null">im_id = #{im_id},</if>
-	 	   		<if test = "name != null">im_name = #{im_name},</if>
-	 	   		<if test = "password != null">im_password = #{im_password},</if>
-	 	   		<if test = "email_id != null">im_email_id = #{im_email_id},</if>
-	 	   		<if test = "email_domain != null">im_email_domain = #{im_email_domain},</if>
-	 	   		<if test = "basic_addr != null">im_basic_addr = #{im_basic_addr},</if>
-	 	   		<if test = "detail_addr != null">im_detail_addr = #{im_detail_addr},</if>
+	 	   		<if test = "im_id != null">im_id = #{im_id},</if>
+	 	   		<if test = "im_name != null">im_name = #{im_name},</if>
+	 	   		<if test = "im_password != null">im_password = #{im_password},</if>
+	 	   		<if test = "im_email_id != null">im_email_id = #{im_email_id},</if>
+	 	   		<if test = "im_email_domain != null">im_email_domain = #{im_email_domain},</if>
+	 	   		<if test = "im_basic_addr != null">im_basic_addr = #{im_basic_addr},</if>
+	 	   		<if test = "im_detail_addr != null">im_detail_addr = #{im_detail_addr},</if>
 	 	   </set>  
-	 	where id = #{im_id}	   
+	 	where im_id = #{im_id}	   
 	 </update>
 	
 	<delete id = "deleteMember" parameterType = "String">

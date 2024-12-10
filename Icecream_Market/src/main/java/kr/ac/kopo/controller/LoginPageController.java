@@ -1,5 +1,7 @@
 package kr.ac.kopo.controller;
 
+import java.util.List;
+
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
@@ -26,14 +28,16 @@ public class LoginPageController implements Controller {
 		String id = request.getParameter("id");
 		String pwd = request.getParameter("password");
 		
+		//로그인 시도시 실행되는 코드
 		if(id != null) {
-		MemberVO member = mService.findMember(id); 
+			
+		MemberVO member = mService.findMember(id);
 		
-			if (member != null) {
-				session.setAttribute("member", member);
-			} else {
-				request.setAttribute("loginFailed", true);
-			}
+		if (member.getIm_id().equals(id) && member.getIm_password().equals(pwd)) {
+			session.setAttribute("member", member);
+		} else {
+			request.setAttribute("loginFailed", true);
+		}
 		
 		}
 		return "/jsp/member/loginPage.jsp";

@@ -22,7 +22,7 @@
 				<h6>잘못된 ID 혹은 비밀번호를 입력하셨습니다.</h6>
 			</c:if>
 			<c:if test = "${not empty sessionScope.member}">
-				
+				<c:redirect url = "login.do"/>
 			</c:if>
 		</div>
 		<div align = "center">

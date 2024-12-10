@@ -32,6 +32,9 @@ public class MemberDAOImpl implements MemberDAO {
 	@Override
 	public MemberVO selectMemberByID(String id) {
 		MemberVO member = sqlSession.selectOne("dao.memberDAO.selectByID", id);
+		if(member == null) {
+			System.out.println("Null");
+		}
 		return member;
 	}
 

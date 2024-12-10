@@ -8,8 +8,9 @@ public interface CartDAO {
 	
 	int insert(CartVO cart);
 	List<CartVO> selectAll();
-	CartVO selectByCupName(CartVO cart);
-	int deleteByCupName(CartVO cart);
+	CartVO selectByCup_and_Id(CartVO cart);
+	int updateByCup_and_Id(CartVO cart);
+	int deleteByCup_and_Id(CartVO cart);
 	int deleteAll();
 	
 }

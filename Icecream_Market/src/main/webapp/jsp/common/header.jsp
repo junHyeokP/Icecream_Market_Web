@@ -26,7 +26,7 @@
 			<a class = "anchor" href = "/Icecream_Market/member/myPage.do">마이페이지</a>
 		</c:if>
 		<c:if test = "${ not empty sessionScope.cart}">
-			<a class = "anchor" href = "/Icecream_Market/icecream/cartPage.do">장바구니</a>
+			<a class = "anchor" href = "/Icecream_Market/icecream/iceCartPage.do">장바구니</a>
 		</c:if>
 	 
 	</div>

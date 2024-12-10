@@ -9,7 +9,9 @@
 
 	<typeAliases>
 		<typeAlias type="kr.ac.kopo.vo.BoardVO" alias="BoardVO" />	
-		<typeAlias type="kr.ac.kopo.vo.MemberVO" alias="MemberVO" />	
+		<typeAlias type="kr.ac.kopo.vo.MemberVO" alias="MemberVO" />
+		<typeAlias type="kr.ac.kopo.vo.Ice_StockVO" alias="Ice_StockVO" />
+		<typeAlias type="kr.ac.kopo.vo.CartVO" alias="CartVO" />	
 	</typeAliases>
 
 	<environments default="development">
@@ -29,6 +31,7 @@
 		<mapper resource="common/db/board.xml"/>
 		<mapper resource="common/db/member.xml"/>
 		<mapper resource="common/db/cart.xml"/>
+		<mapper resource="common/db/ice_Stock.xml"/>
 	</mappers>
 
 </configuration>
