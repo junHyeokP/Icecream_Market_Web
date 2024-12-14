@@ -2,20 +2,18 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace = "dao.cartDAO">
+<mapper namespace = "dao.orderDAO">
 	
 	 <!-- DDL, need to COMMIT -->
-	 <insert id = "insertCart" parameterType = "CartVO">
+	 <insert id = "insertOrder" parameterType = "CartVO">
 	 	insert into ice_cart (cart_ice_cup, cart_quantity, im_id)
 	 	     values (#{cart_ice_cup}, #{cart_quantity}, #{im_id})
 	 </insert>
 	
-	 <select id = "selectAllCart" resultType = "CartVO">
+	 <select id = "selectAllOrder" resultType = "CartVO">
 	 	select cart_ice_cup, cart_quantity
 	 	  from ice_cart
 	 </select>
 	 
-	 <delete id = "deleteAllCart">
-	 	delete ice_cart
-	 </delete>
+	 
 </mapper>

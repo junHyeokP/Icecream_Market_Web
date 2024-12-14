@@ -1,19 +1,19 @@
 package kr.ac.kopo.controller;
 
+import jakarta.servlet.http.Cookie; 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import kr.ac.kopo.service.CartService;
-import kr.ac.kopo.vo.CartVO;
+import kr.ac.kopo.service.OrderService;
 import kr.ac.kopo.vo.MemberVO;
 
 public class IceSelectController implements Controller {
 	
-	CartService cService;
+	OrderService cService;
 	HttpSession session;
 	
 	public IceSelectController() {
-		cService = new CartService();
+		cService = new OrderService();
 	}
 
 	@Override
@@ -40,10 +40,6 @@ public class IceSelectController implements Controller {
 		
 		iceCup = sb.toString();
 		System.out.println(iceCup);
-		CartVO cart = new CartVO(iceCup, im_id, quantity);
-		
-		cService.insertCart(cart);
-		session.setAttribute("cart", true);
 		
 		return "/jsp/icecream/iceSelect.jsp";
 	}

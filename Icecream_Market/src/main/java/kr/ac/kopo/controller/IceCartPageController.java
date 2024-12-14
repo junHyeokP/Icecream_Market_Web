@@ -5,17 +5,17 @@ import java.util.List;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import kr.ac.kopo.service.CartService;
-import kr.ac.kopo.vo.CartVO;
+import kr.ac.kopo.service.OrderService;
+import kr.ac.kopo.vo.OrderVO;
 import kr.ac.kopo.vo.MemberVO;
 
 public class IceCartPageController implements Controller {
 	
-	CartService cService;
+	OrderService cService;
 	HttpSession session;
 	
 	public IceCartPageController() {
-		cService = new CartService();
+		cService = new OrderService();
 	}
 
 	@Override
@@ -25,7 +25,7 @@ public class IceCartPageController implements Controller {
 		MemberVO member = (MemberVO)session.getAttribute("member");
 		String im_id = member.getIm_id();
 		
-		List<CartVO> list = cService.selectAllCart();
+		List<OrderVO> list = cService.selectAllCart();
 		
 		if(list != null) {
 		session.setAttribute("cartList", list);
