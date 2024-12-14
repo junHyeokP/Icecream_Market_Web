@@ -12,7 +12,6 @@
 <script>
 function isIceSelected(event) {
 	
-	
 	const quantity = $("#quantity").val()
 	const checked = $(".box").is(":checked")
 	
