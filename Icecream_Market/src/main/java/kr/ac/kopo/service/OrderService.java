@@ -14,18 +14,38 @@ public class OrderService {
 		this.orderDao = new OrderDAOImpl();
 	}
 	
-	public void insertCart(OrderVO cart) {
-		int result = orderDao.insert(cart);
-		System.out.println(result + "개 아이템이 장바구니에 들어감");
+	public void insertOrder(OrderVO order) {
+		int result = orderDao.insert(order);
+		System.out.println(result + "개 주문생성");
 	}
 	
-	public List<OrderVO> selectAllCart() {
+	public int selectSeq() {
+		int result = orderDao.selectSeq();
+		return result;
+	}
+	
+	public List<OrderVO> selectAllOrder() {
 		List<OrderVO> list = orderDao.selectAll();
 		return list;
 	}
 	
-	public void deleteAllCart() {
-		int result = orderDao.deleteAll();
-		System.out.println(result + "개 아이템 삭제");
+	public List<OrderVO> selectMemberOrder(String id) {
+		List<OrderVO> list = orderDao.selectCup(id);
+		return list;
+	}
+	
+	public void updateAcceptOrder(String state) {
+		int result = orderDao.updateAcceptStatement(state);
+		System.out.println(result + "개 주문 승인");
+	}
+	
+	public void updateRejectOrder(String state) {
+		int result = orderDao.updateRejectStatement(state);
+		System.out.println(result + "개 주문 취소");
+	}
+
+	public void deleteAll(String id) {
+		int result = orderDao.deleteAll(id);
+		System.out.println(result + "개 주문 삭제");
 	}
 }

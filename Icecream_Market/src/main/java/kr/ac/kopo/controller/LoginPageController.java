@@ -25,6 +25,9 @@ public class LoginPageController implements Controller {
 		this.session = request.getSession();
 		request.setCharacterEncoding("UTF-8");
 		
+		String ad_id = "june";
+		String ad_pwd = "1234";
+		
 		String id = request.getParameter("id");
 		String pwd = request.getParameter("password");
 		
@@ -32,6 +35,10 @@ public class LoginPageController implements Controller {
 		if(id != null) {
 			
 		MemberVO member = mService.findMember(id);
+		
+		if(member.getIm_id().equals(ad_id) && member.getIm_password().equals(ad_pwd)) {
+			session.setAttribute("admin", true);
+		}
 		
 		if (member.getIm_id().equals(id) && member.getIm_password().equals(pwd)) {
 			session.setAttribute("member", member);

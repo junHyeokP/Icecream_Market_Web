@@ -25,7 +25,7 @@ public class IceCartPageController implements Controller {
 		MemberVO member = (MemberVO)session.getAttribute("member");
 		String im_id = member.getIm_id();
 		
-		List<OrderVO> list = cService.selectAllCart();
+		List<OrderVO> list = cService.selectAllOrder();
 		
 		if(list != null) {
 		session.setAttribute("cartList", list);

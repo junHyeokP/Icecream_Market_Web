@@ -5,7 +5,7 @@
 <mapper namespace="dao.Ice_StockDAO">
 
 	<select id = "selectAllIce" resultType = "Ice_StockVO">
-		select ice_flavors, ice_quantity, ice_uptodate
+		select ice_flavors, ice_quantity, ice_uptodate, ice_price
 		  from ice_stocks
 	</select>
 

@@ -24,6 +24,7 @@ public class LogoutController implements Controller {
 		
 		this.session = request.getSession();
 		session.removeAttribute("member");
+		session.removeAttribute("admin");
 		
 		return "/jsp/member/logout.jsp";
 	}

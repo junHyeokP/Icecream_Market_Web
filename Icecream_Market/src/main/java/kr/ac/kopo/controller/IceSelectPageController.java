@@ -1,6 +1,8 @@
 package kr.ac.kopo.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -8,6 +10,7 @@ import jakarta.servlet.http.HttpSession;
 import kr.ac.kopo.service.OrderService;
 import kr.ac.kopo.service.Ice_StockService;
 import kr.ac.kopo.vo.Ice_StockVO;
+import kr.ac.kopo.vo.OrderVO;
 
 public class IceSelectPageController implements Controller {
 	

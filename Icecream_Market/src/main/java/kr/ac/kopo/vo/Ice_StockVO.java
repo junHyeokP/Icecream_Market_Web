@@ -7,7 +7,7 @@ public class Ice_StockVO {
 	private String ice_flavors;
 	private int ice_quantity;
 	private String ice_uptodate;
-	
+	private int ice_price;
 	
 	public Ice_StockVO() {
 		
@@ -28,6 +28,26 @@ public class Ice_StockVO {
 		this.ice_uptodate = ice_uptodate;
 		
 	}
+
+	public Ice_StockVO(String ice_flavors, int ice_quantity, String ice_uptodate, int ice_price) {
+		super();
+		this.ice_flavors = ice_flavors;
+		this.ice_quantity = ice_quantity;
+		this.ice_uptodate = ice_uptodate;
+		this.ice_price = ice_price;
+	}
+
+	
+
+	public int getIce_price() {
+		return ice_price;
+	}
+
+
+	public void setIce_price(int ice_price) {
+		this.ice_price = ice_price;
+	}
+
 
 	public String getIce_flavors() {
 		return ice_flavors;

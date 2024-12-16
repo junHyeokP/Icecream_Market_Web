@@ -17,40 +17,65 @@ private SqlSession sqlSession;
 
 	@Override
 	public int insert(OrderVO order) {
-		int result = sqlSession.insert("dao.orderDAO.insertCart", order);
+		int result = sqlSession.insert("dao.orderDAO.insertOrder", order);
 		sqlSession.commit();
 		return result;
 	}
 
 	@Override
 	public List<OrderVO> selectAll() {
-		List<OrderVO> list = sqlSession.selectList("dao.orderDAO.selectAllCart");
+		List<OrderVO> list = sqlSession.selectList("dao.orderDAO.selectAllOrder");
+		for(OrderVO order : list) {
+			System.out.println("ALL : " + order.toString());
+		}
 		return list;
 	}
 
 	@Override
-	public OrderVO selectByCup_and_Id(OrderVO order) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<OrderVO> selectCup(String im_id) {
+		List<OrderVO> list = sqlSession.selectList("dao.orderDAO.selectOrderByID", im_id);
+		for(OrderVO order : list) {
+			System.out.println(order.toString());
+		}
+		return list;
 	}
 
 	@Override
-	public int updateByCup_and_Id(OrderVO order) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int selectSeq() {
+		int no = sqlSession.selectOne("dao.orderDAO.selectSeq");
+		return no;
 	}
-
+	
 	@Override
-	public int deleteByCup_and_Id(OrderVO order) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int deleteAll() {
-		int result = sqlSession.delete("dao.orderDAO.deleteAllCart");
+	public int deleteOrder(int no) {
+		int result = sqlSession.delete("dao.orderDAO.deleteOrder", no);
 		sqlSession.commit();
 		return result;
 	}
+
+	@Override
+	public int updateAcceptStatement(String no) {
+		int result = sqlSession.update("dao.orderDAO.updateAcceptStatement", Integer.parseInt(no));
+		sqlSession.commit();
+		return result;
+	}
+	
+	@Override
+	public int updateRejectStatement(String no) {
+		int result = sqlSession.update("dao.orderDAO.updateRejectStatement", Integer.parseInt(no));
+		sqlSession.commit();
+		return result;
+	}
+
+	@Override
+	public int deleteAll(String id) {
+		int result = sqlSession.update("dao.orderDAO.deleteAll", id);
+		sqlSession.commit();
+		return result;
+	}
+
+	
+
+	
 	
 }

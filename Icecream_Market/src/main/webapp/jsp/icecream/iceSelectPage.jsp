@@ -29,7 +29,7 @@ function isIceSelected(event) {
 <body>
 <%@include file = "/jsp/common/header.jsp" %>
 	<div>
-		<div>
+		<div>${ icecream.ice_price }
 		 <form action = "iceSelect.do" onsubmit = "return isIceSelected(event)">
 		  <h2>아이스크림 맛 선택</h2>
 		   <c:forEach var = "icecream" items="${ice_Stock}">
@@ -39,6 +39,7 @@ function isIceSelected(event) {
 		   		</c:when>
 		   		<c:otherwise>
 		   			<input type = "checkbox" class = "box" name = "ice" value = "${icecream.ice_flavors}">${icecream.ice_flavors}
+		   			<input type = "hidden" name = "${icecream.ice_flavors}" value = "${icecream.ice_price}">
 		   		</c:otherwise>
 		   	</c:choose>   	 		
 			</c:forEach>
@@ -47,11 +48,11 @@ function isIceSelected(event) {
 				<option value = "1">1</option>
 				<option value = "2">2</option>
 				<option value = "3">3</option>
-				<option value = "3">4</option>
-				<option value = "3">5</option>
+				<option value = "4">4</option>
+				<option value = "5">5</option>
 			  </select>
 			<br>
-			<button type = "submit">장바구니에 담기</button>
+			<button type = "submit">주문확인</button>
 			</form>
 		</div>
 	</div>

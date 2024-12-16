@@ -25,8 +25,11 @@
 			<button id = "logoutBtn">로그아웃</button>
 			<a class = "anchor" href = "/Icecream_Market/member/myPage.do">마이페이지</a>
 		</c:if>
-		<c:if test = "${ not empty sessionScope.cart}">
-			<a class = "anchor" href = "/Icecream_Market/icecream/iceCartPage.do">장바구니</a>
+		<c:if test = "${ not empty sessionScope.member }">
+			<a class = "anchor" href = "/Icecream_Market/icecream/orderList.do">주문내역</a>
+		</c:if>
+		<c:if test = "${ not empty sessionScope.admin}">
+			<a class = "anchor" href = "/Icecream_Market/member/adminPage.do">관리자</a>
 		</c:if>
 	 
 	</div>

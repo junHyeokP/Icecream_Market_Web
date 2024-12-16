@@ -11,7 +11,7 @@
 		<typeAlias type="kr.ac.kopo.vo.BoardVO" alias="BoardVO" />	
 		<typeAlias type="kr.ac.kopo.vo.MemberVO" alias="MemberVO" />
 		<typeAlias type="kr.ac.kopo.vo.Ice_StockVO" alias="Ice_StockVO" />
-		<typeAlias type="kr.ac.kopo.vo.CartVO" alias="CartVO" />	
+		<typeAlias type="kr.ac.kopo.vo.OrderVO" alias="OrderVO" />	
 	</typeAliases>
 
 	<environments default="development">
