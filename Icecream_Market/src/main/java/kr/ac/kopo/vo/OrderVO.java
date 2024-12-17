@@ -14,6 +14,8 @@ public class OrderVO {
 		
 	}	
 
+	
+
 	public OrderVO(int order_ice_no, String im_id, String order_ice_cup, int order_quantity, int order_cup_price) {
 		super();
 		this.order_ice_no = order_ice_no;
@@ -22,7 +24,7 @@ public class OrderVO {
 		this.order_quantity = order_quantity;
 		this.order_cup_price = order_cup_price;
 	}
-	
+
 	public OrderVO(int order_ice_no, String im_id, String order_ice_cup, int order_quantity, String order_date,
 			int order_cup_price, String order_statement) {
 		super();

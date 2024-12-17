@@ -39,12 +39,6 @@ private SqlSession sqlSession;
 		}
 		return list;
 	}
-
-	@Override
-	public int selectSeq() {
-		int no = sqlSession.selectOne("dao.orderDAO.selectSeq");
-		return no;
-	}
 	
 	@Override
 	public int deleteOrder(int no) {
@@ -71,6 +65,12 @@ private SqlSession sqlSession;
 	public int deleteAll(String id) {
 		int result = sqlSession.update("dao.orderDAO.deleteAll", id);
 		sqlSession.commit();
+		return result;
+	}
+
+	@Override
+	public int selectSeq() {
+		int result = sqlSession.selectOne("dao.orderDAO.selectSeq");
 		return result;
 	}
 

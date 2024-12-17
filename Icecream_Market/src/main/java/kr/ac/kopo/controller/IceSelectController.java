@@ -50,9 +50,9 @@ public class IceSelectController implements Controller {
 		iceCup = sb.toString();
 		System.out.println(iceCup);
 		
-		int no = oService.selectSeq();
+		int order_ice_no = oService.selectSeq();
 		
-		OrderVO order = new OrderVO(no, im_id, iceCup, quantity, total*quantity);
+		OrderVO order = new OrderVO(order_ice_no, im_id, iceCup, quantity, total * quantity);
 		System.out.println("order no :" + order.getOrder_ice_no());
 		
 		session.setAttribute("icecreamOrder", order);

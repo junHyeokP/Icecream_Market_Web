@@ -22,10 +22,10 @@ public class OrderListController implements Controller {
 	public String handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		this.session = request.getSession();
-		String order = request.getParameter("orders");
-		OrderVO or = (OrderVO)session.getAttribute("icecream");
-		
-		if(order != null) {
+		String isOrder = request.getParameter("orders");
+		OrderVO or = (OrderVO)session.getAttribute("icecreamOrder");
+		System.out.println(or.toString());
+		if(isOrder != null) {
 			oService.insertOrder(or);
 		}
 		
