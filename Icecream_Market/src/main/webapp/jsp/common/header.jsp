@@ -15,7 +15,7 @@
 	<h1> 
 		<a id = "title" href = "/Icecream_Market/index.jsp"> 아이스크림 배달 웹 </a>
 	</h1>
-		<a class = "anchor" href = "/Icecream_Market/board/list.do">자유게시판</a>
+		<a class = "anchor" href = "/Icecream_Market/board/boardlist.do">리뷰게시판</a>
 		
 			<c:if test="${ empty sessionScope.member }" >
 				<a class = "anchor" href = "/Icecream_Market/member/loginPage.do">로그인</a>	
