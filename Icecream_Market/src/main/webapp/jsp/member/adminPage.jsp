@@ -5,6 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href = "/Icecream_Market/css/common_CSS/button_Style.css" />
+<link rel="stylesheet" href = "/Icecream_Market/css/icecream_CSS/iceSelectPage_Style.css"/>
+<script src = "/Icecream_Market/lib/jquery-3.7.1.min.js"></script>
 </head>
 <body>
 <%@include file = "/jsp/common/header.jsp" %>

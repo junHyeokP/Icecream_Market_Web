@@ -39,7 +39,7 @@
 				<c:when test="${ order.order_statement eq 'accept' || sessionScope.rig eq true}">
 			 		<h4>승인됨</h4>
 			 	</c:when>
-			 	<c:when test="${ order.order_statement eq 'reject' }">
+			 	<c:when test="${ order.order_statement eq 'reject' || sessionScope.rejected eq true }">
 			 		<h5>주문취소됨</h5>
 			 	</c:when>
 			 	<c:when test="${ order.order_statement eq 'ready' && empty sessionScope.rig}">

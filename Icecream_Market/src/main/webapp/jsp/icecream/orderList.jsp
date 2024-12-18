@@ -33,7 +33,7 @@
 		</tr>
 		
 		<c:forEach var = "orderIce" items = "${ sessionScope.memberOrder }">
-			<c:if test = "${orderIce.order_statement ne 'reject' }">
+			
 			<tr>
 				<td>${ orderIce.order_ice_cup }</td>
 				<td>${ orderIce.order_quantity }</td>
@@ -44,13 +44,16 @@
 						<c:when test = "${ orderIce.order_statement eq 'accept' || sessionScope.rig eq true}">
 							<h5>주문 승인, ${ sessionScope.member.im_basic_addr } ${ sessionScope.member.im_detail_addr } 주소로 배송됨</h5>
 						</c:when>
+						<c:when test = "${orderIce.order_statement eq 'reject' || sessionScope.rejected eq true}">
+							<h5>관리자 주문 거부</h5>
+						</c:when>
 						<c:when test="${orderIce.order_statement eq 'ready' && empty sessionScope.rig}">
-							<h5>관리자가 주문을 확인 중</h5>
+							<h5>관리자 주문 승인 대기중</h5>
 						</c:when>
 					</c:choose>
 				</td>	
 			</tr>		
-			</c:if>
+			
 		</c:forEach>
 	</table>
 

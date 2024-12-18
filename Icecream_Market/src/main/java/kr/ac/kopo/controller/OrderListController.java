@@ -24,8 +24,9 @@ public class OrderListController implements Controller {
 		this.session = request.getSession();
 		String isOrder = request.getParameter("orders");
 		OrderVO or = (OrderVO)session.getAttribute("icecreamOrder");
-		System.out.println(or.toString());
+		
 		if(isOrder != null) {
+			System.out.println(or.toString());
 			oService.insertOrder(or);
 		}
 		

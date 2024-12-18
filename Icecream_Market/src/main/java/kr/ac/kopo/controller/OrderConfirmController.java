@@ -33,6 +33,7 @@ public class OrderConfirmController implements Controller {
 		}
 		else if(reject != null) {
 			oService.updateRejectOrder(reject);
+			session.setAttribute("rejected", true);
 		}
 		
 		
