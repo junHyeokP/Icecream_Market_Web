@@ -21,7 +21,7 @@ public class BoardListController implements Controller {
 		List<BoardVO> list = service.SelectAll();
 		request.setAttribute("boardList", list);
 		
-		return "/jsp/board/list.jsp";
+		return "/jsp/boardList/list.jsp";
 	}
 
 }

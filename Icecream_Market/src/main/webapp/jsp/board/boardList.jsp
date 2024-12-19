@@ -9,7 +9,7 @@
 </head>
 <body>
 <%@include file = "/jsp/common/header.jsp" %>
-	<h2>자유게시판 페이지</h2>
+	<h2>리뷰게시판 페이지</h2>
 	<table border = "2">
 	 <tr>
 	 	<th>번호</th>
